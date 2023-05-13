@@ -1,0 +1,1 @@
+mvnn test -DsuiteXmlFile=testng.xml

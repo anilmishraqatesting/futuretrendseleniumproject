@@ -1,0 +1,17 @@
+<suite name="Login Suite">
+	
+	<test name="Login test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.LoginTest" />
+		
+		
+	</classes>
+		
+		
+	</test>
+	
+	
+	
+</suite>
