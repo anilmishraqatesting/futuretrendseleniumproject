@@ -1,0 +1,29 @@
+<suite name="Book Store suite">
+	
+	<test name="Book store  Positive test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.BookStoreCase1" />
+		<class name="futuretrend.alltest.BookStoreCase2" />
+		<class name="futuretrend.alltest.BookStoreCase3" />
+		<class name="futuretrend.alltest.BookStoreCase4" />
+		
+	</classes>
+		
+		
+	</test>
+	
+	<test name="Book store  Negatiive test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.BookStoreNegativeCase1" />
+		<class name="futuretrend.alltest.BookStoreNegativeCase2" />
+		<class name="futuretrend.alltest.BookStoreNegativeCase3" />
+		
+	</classes>
+		
+		
+	</test>
+	</suite>

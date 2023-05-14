@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 
 import futuretrend.allpages.LoginPage;
 import futuretrend.driverfactory.TestBase;
-import futuretrend.utilties.CommonFunction;
 
 public class LoginTest extends TestBase{
 	
@@ -16,7 +15,6 @@ public class LoginTest extends TestBase{
 	{
 		createNode("loginCase");
 		LoginPage page=new LoginPage();
-		CommonFunction.launchURL();
 		 page.enterUserName();
 		 page.enterPassword();
 		 page.clickLoginbutton();

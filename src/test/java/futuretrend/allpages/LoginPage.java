@@ -29,6 +29,15 @@ public class LoginPage extends TestBase {
 	public WebElement headertext;
 
 
+	@FindBy(xpath = "//div[contains(text(),'Please enter your password')]")
+	public WebElement blankpasswordmessagetxt;
+
+
+	@FindBy(xpath = "//div[contains(text(),'Please enter your username or email')]")
+	public WebElement blankusernamemessagetxt;
+
+	@FindBy(xpath = "//div[contains(text(),'Password is incorrect. Please try again.')]")
+	public WebElement wrongpasswordmessagetxt;
 
 
 	public LoginPage()
@@ -85,9 +94,50 @@ public class LoginPage extends TestBase {
 
 
 
+	public void validateFirstNegativeLoginCase()
+	{
 
+		function.click(loginbutton, "Login Button");
 
+		function.checkElement(blankusernamemessagetxt, "Please enter your username or email");
+		function.checkElement(blankpasswordmessagetxt, "Please enter your password");
 
+	}
+
+	
+
+	public void validatesecondNegativeLoginCase()
+	{
+		String username=CommonFunction.readpropertFile("username");
+		function.enterData(usernametextbox, username, "username");
+		function.click(loginbutton, "Login Button");
+
+		function.checkElement(blankpasswordmessagetxt, "Please enter your password");
+
+	}
+
+	
+	public void validateThirdNegativeLoginCase()
+	{
+		String username=CommonFunction.readpropertFile("username");
+		function.enterData(usernametextbox, username, "username");
+		function.enterData(passwordtextbox, "abc", "password");
+		function.click(loginbutton, "Login Button");
+
+		function.checkElement(wrongpasswordmessagetxt, "Password is incorrect. Please try again.");
+
+	}
+	
+	
+	public void validatefourthNegativeLoginCase()
+	{
+		function.enterData(usernametextbox, "xyz", "username");
+		function.enterData(passwordtextbox, "abc", "password");
+		function.click(loginbutton, "Login Button");
+
+		function.checkElement(wrongpasswordmessagetxt, "Password is incorrect. Please try again.");
+
+	}
 
 
 

@@ -1,0 +1,14 @@
+<suite name="Radio button suite">
+	
+	<test name="Radio button form test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.RadioButtonTest" />
+		
+	</classes>
+		
+		
+	</test>
+	
+	</suite>

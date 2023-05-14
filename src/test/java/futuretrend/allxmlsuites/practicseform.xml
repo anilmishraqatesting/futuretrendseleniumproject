@@ -1,0 +1,14 @@
+<suite name="Practicse suite">
+	
+	<test name="Practicse form test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.PracticseFormTest" />
+		
+	</classes>
+		
+		
+	</test>
+	
+	</suite>

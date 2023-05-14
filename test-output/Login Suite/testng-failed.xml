@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Login Suite]">
-  <test thread-count="5" name="Login test(failed)">
+  <test thread-count="5" name="Login Positive test(failed)">
     <classes>
       <class name="futuretrend.alltest.LoginTest">
         <methods>
@@ -13,5 +13,18 @@
         </methods>
       </class> <!-- futuretrend.alltest.LoginTest -->
     </classes>
-  </test> <!-- Login test(failed) -->
+  </test> <!-- Login Positive test(failed) -->
+  <test thread-count="5" name="Login Negative test(failed)">
+    <classes>
+      <class name="futuretrend.alltest.NegativeLoginCase1">
+        <methods>
+          <include name="closeTest"/>
+          <include name="negativeLoginCase1"/>
+          <include name="startTest"/>
+          <include name="closereporting"/>
+          <include name="startReporting"/>
+        </methods>
+      </class> <!-- futuretrend.alltest.NegativeLoginCase1 -->
+    </classes>
+  </test> <!-- Login Negative test(failed) -->
 </suite> <!-- Failed suite [Login Suite] -->

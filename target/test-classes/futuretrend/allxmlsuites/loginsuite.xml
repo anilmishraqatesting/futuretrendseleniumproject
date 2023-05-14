@@ -1,17 +1,54 @@
 <suite name="Login Suite">
 	
-	<test name="Login test">
+	<test name="Login Positive test">
 		
 	<classes>
 		
 		<class name="futuretrend.alltest.LoginTest" />
-		
 		
 	</classes>
 		
 		
 	</test>
 	
-	
-	
+	<test name="Login Negative test1">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.NegativeLoginCase1" />
+		
+	</classes>
+		
+		
+	</test>
+	<test name="Login Negative test2">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.NegativeLoginCase2" />
+		
+	</classes>
+		
+		
+	</test>
+	<test name="Login Negative test3">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.NegativeLoginCase3" />
+		
+	</classes>
+		
+		
+	</test>
+	<test name="Login Negative test4">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.NegativeLoginCase4" />
+		
+	</classes>
+		
+		
+	</test>
 </suite>

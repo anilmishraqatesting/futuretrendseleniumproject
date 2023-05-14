@@ -1,0 +1,14 @@
+<suite name="Webtable suite">
+	
+	<test name="Webtable data test">
+		
+	<classes>
+		
+		<class name="futuretrend.alltest.WebTableTest" />
+		
+	</classes>
+		
+		
+	</test>
+	
+	</suite>

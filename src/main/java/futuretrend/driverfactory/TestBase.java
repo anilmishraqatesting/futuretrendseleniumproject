@@ -5,7 +5,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 import futuretrend.reportutilty.HighLevelReport;
 import futuretrend.utilties.CommonFunction;
@@ -35,9 +34,15 @@ public class TestBase extends HighLevelReport{
 	public void startTest()
 	{
 		
-		driver=BrowserFactory.initalizeDriver();
-		DriverFactorySetting.getInstance().setDriver(driver);
-		driver=DriverFactorySetting.getInstance().getDriver();
+		try {
+			driver=BrowserFactory.initalizeDriver();
+			DriverFactorySetting.getInstance().setDriver(driver);
+			driver=DriverFactorySetting.getInstance().getDriver();
+			CommonFunction function=new CommonFunction();
+			function.launchURL();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -46,9 +51,16 @@ public class TestBase extends HighLevelReport{
 	public void closeTest()
 	{
 		
-		DriverFactorySetting.getInstance().removeDriver();
+		try {
+			DriverFactorySetting.getInstance().removeDriver();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
+	
+	
+	
 	
 
 }
